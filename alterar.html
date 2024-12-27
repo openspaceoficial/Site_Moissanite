@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romulo Moissanite - Add Estoque</title>
+    <link rel="stylesheet" href="alterar.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>Romulo <span class="verde">Moissanite</span></h2>
+        <div class="dropdown">
+            <button class="dropbtn">Cadastro/Login</button>
+            <div class="dropdown-content" id="dropdownMenu">
+                <p>Usuário</p>
+                <input type="text">
+                <p>Senha</p>
+                <input type="password">
+                <button>Entrar</button>
+            </div>
+        </div>
+        <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Menu Lateral -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="area.html">Área Restrita</a></li>
+                <li><a href="/Fazer/fazerOrcamento.html">Orçamento</a></li>
+                <li><a href="Historico.html">Histórico</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <h1>Alterar Estoque</h1>
+            <div class="barra-pesquisa">
+                <div class="ui-input-container">
+                    <input required="" placeholder="Formato da Pedra..." class="ui-input" type="text" />
+                    <div class="ui-input-underline"></div>
+                    <div class="ui-input-highlight"></div>
+                    <div class="ui-input-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="container-select">
+                        <select id="opcao" onchange="atualizarInput()">
+                            <option value="">Tipo da Pedra</option>
+                            <option value="Moissanite">Moissanite</option>
+                            <option value="Zirconia">Zirconia</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="quadro-top">
+                <div>
+                    <p>Tipo</p>
+                    <input type="text" id="campoInput" readonly>
+                </div>
+                <div>
+                    <p>Formato</p>
+                    <input type="text" id="entrada1">
+                </div>
+                <div>
+                    <p>Tamanho</p>
+                    <input type="text" id="entrada2">
+                </div>
+                <div>
+                    <p>Preço</p>
+                    <input type="text" id="entrada3">
+                </div>
+                <div>
+                    <p>Estoque</p>
+                    <input type="text" id="entrada4">
+                </div>
+                <div>
+                    <p>Custo</p>
+                    <input type="text" id="entrada5">
+                </div>
+                <button id="abrir" onclick="abrirFechar()">Adicionar</button>
+                <dialog id="modal">
+                    <div id="modal-body">
+                        <p> Confirmar Adição?</p>
+                    </div>
+                    <button id="fechar" onclick="abrirFechar()">Não</button>
+                    <button id="conf" onclick="adicionarTexto()">Sim</button>
+                </dialog>
+            </div>
+
+            <!-- <button onclick="adicionarTexto()">Adicionar</button> -->
+
+            <div class="quadro-geral">
+
+                <div class="container">
+                    <label for="name">Tipo</label>
+                    <input type="text" id="saida6" readonly>
+                </div>
+
+                <div class="container">
+                    <label for="saida1">Formato:</label>
+                    <input type="text" id="saida1" readonly>
+                </div>
+                <div class="container">
+                    <label for="saida2">Tamanho:</label>
+                    <input type="text" id="saida2" readonly>
+                </div>
+
+                <div class="container">
+                    <label for="saida3">Preço:</label>
+                    <input type="text" id="saida3" readonly>
+                </div>
+
+                <div class="container">
+                    <label for="saida4">Estoque:</label>
+                    <input type="text" id="saida4" readonly>
+                </div>
+
+                <div class="container">
+                    <label for="saida5">Custo:</label>
+                    <input type="text" id="saida5" readonly>
+                </div>
+
+                <div class="container">
+                    <button onclick="alterarTexto()">Alterar</buttton>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="nome-footer">
+            <h3>Romulo <span>Moissanite</span></h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Historico.html">Histórico</a></li>
+                <li><a href="/Fazer/fazerOrcamento.html">Orçamento</a></li>
+                <li><a href="area.html">Área Restrita</a></li>
+            </ul>
+        </nav>
+        <div class="redes">
+            <a href="https://www.instagram.com/openspace.oficial/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-facebook" ></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="alterar.js"></script>
+    <script src="https://kit.fontawesome.com/5553e94d09.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

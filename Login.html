@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romulo Moissanite - Login</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+
+
+    <main>
+        <header>
+            <h2>Romulo <span class="verde">Moissanite</span></h2>
+            <!-- <div class="dropdown">
+                <button class="dropbtn">Cadastro/Login</button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <p>Usuário</p>
+                    <input type="text">
+                    <p>Senha</p>
+                    <input type="password">
+                    <button>Entrar</button>
+                </div>
+            </div> -->
+            <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Menu Lateral -->
+            <div class="sidebar" id="sidebar">
+                <ul>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Moissanite</a></li>
+                    <li><a href="#">Zirconia</a></li>
+                    <li><a href="#">Área Restrita</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Registrar</h1>
+
+                    <input type="text" placeholder="Nome completo">
+                    <div>
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Senha">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Telefone" id="telefone" oninput="mascara_telefone()"
+                            maxlength="16">
+                        <input type="date">
+                    </div>
+                    <h4>Endereço</h4>
+                    <input type="text" placeholder="Endereço">
+                    <div>
+                        <input type="text" placeholder="CEP" id="cep" oninput=mascara_cep() maxlength="10">
+                        <input type="text" placeholder="Cidade">
+                    </div>
+                    <button>Cadastrar</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form>
+                    <h1>Entrar</h1>
+
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Senha">
+                    <a href="#">Esqueceu sua senha?</a>
+                    <button>Entrar</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Bem vindo de volta!</h1>
+                        <p>Entre com seu perfil</p>
+                        <button class="hidden" id="login">Entrar</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Registrar</h1>
+                        <p>Cadastre-se com seus dados pessoais para usar todos os nossos recursos</p>
+                        <button class="hidden" id="register">Cadastre-se</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-formMob">
+            <div class="form-containerMob" id="form-containerMob">
+                <!-- Tela de Login -->
+                <div class="form-boxMob" id="login-boxMob">
+                    <h2>Login</h2>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Senha" required>
+                        <button type="submit">Entrar</button>
+                        <a href="#">Esqueceu sua senha?</a>
+                    </form>
+                    <button class="toggle-btnMob" onclick="toggleForm()">Não tem uma conta? Cadastre-se</button>
+                </div>
+
+                <!-- Tela de Cadastro -->
+                <div class="form-boxMob" id="signup-boxMob">
+                    <h2>Cadastro</h2>
+                    <form action="#" method="POST">
+                        <input type="text" placeholder="Nome completo">
+                        <div>
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Senha">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Telefone" id="telefone" oninput="mascara_telefone()"
+                                maxlength="16">
+                            <input type="date">
+                        </div>
+                        <h4>Endereço</h4>
+                        <input type="text" placeholder="Endereço">
+                        <div>
+                            <input type="text" placeholder="CEP" id="cep" oninput=mascara_cep() maxlength="10">
+                            <input type="text" placeholder="Cidade">
+                        </div>
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                    <button class="toggle-btnMob" onclick="toggleForm()">Já tem uma conta? Faça login</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="nome-footer">
+            <h3>Romulo <span>Moissanite</span></h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Moissanite</a></li>
+                <li><a href="#">Área Restrita</a></li>
+                <li><a href="#">Zirconia</a></li>
+            </ul>
+        </nav>
+        <div class="redes">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+        </div>
+    </footer>
+
+
+    <script src="login.js"></script>
+    <script src="https://kit.fontawesome.com/5553e94d09.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

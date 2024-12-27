@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    padding: 0;
+}
+
+
+
+aside {
+    width: 100%;
+    height: 100vh;
+}
+
+header>main {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid rgb(129, 117, 117);
+    box-shadow: 1px 1px 10px black;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+}
+
+h2 {
+    margin-right: 45%;
+    margin-left: 5%;
+}
+
+h2>span {
+    color: #3A6332;
+}
+
+
+main>img {
+    margin-left: 10%;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 85%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #3A6332;
+    color: white;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Estilo para transição do ícone de barras */
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 8px;
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg);
+    position: relative;
+    top: -8px;
+}
+
+.sidebar ul li a:hover {
+    transform: scale(.5.1);
+    font-weight: 800;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropbtn {
+    border-radius: 10px;
+    border: none;
+    height: 3rem;
+    color: white;
+    background-color: #3A6332;
+    font-family: "Lexend", sans-serif;
+    transition: 0.5s;
+    width: 8rem;
+}
+
+.dropbtn:hover {
+    background-color: #5e9154;
+
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 30%;
+}
+
+.dropdown-content p {
+    color: black;
+    display: block;
+    margin-left: 10px;
+}
+
+.dropdown-content input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.dropdown-content button {
+    margin-left: 30%;
+    border: none;
+    border-radius: 10px;
+    background-color: #5e9154;
+    height: 30px;
+    width: 80px;
+    color: white;
+    margin-bottom: 4px;
+    font-family: "Lexend", sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+
+
+.content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.titulo {
+    position: absolute;
+    top: 18px;
+    margin-left: 135px;
+    color:#3A6332;
+    font-size: 29px;
+ }
+.frete{
+    height: 10rem;
+    width: 23rem;
+   
+    border-radius: 15px;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #3A6332;
+}
+.desconto{
+    height: 10rem;
+    width: 23rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #3A6332;
+}
+
+.moissanite{
+    height: 10rem;
+    width: 23rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #3A6332;
+}
+
+.zirconia{
+    height: 10rem;
+    width: 23rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #3A6332;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+}
+.valor{
+    height: 1rem;
+    width: 6rem;
+    border: solid black 1px;
+    margin-left: 8rem;
+    margin-top: 3.2rem;
+}
+.valor2{
+    height: 1rem;
+    width: 6rem;
+    border: solid black 1px;
+    margin-left: 5.3rem;
+    margin-top: 3.2rem;
+}
+.valor3{
+    height: 1rem;
+    width: 6rem;
+    border: solid black 1px;
+    margin-left: 4.2rem;
+    margin-top: 3.2rem;
+}
+.valor4{
+    height: 1rem;
+    width: 6rem;
+    border: solid black 1px;
+    margin-left: 5.3rem;
+    margin-top: 3.2rem;
+}
+footer {
+    background-color: #3A6332;
+    height: 140px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    padding-left: 300px;
+    color: #ffff;
+    position: absolute;
+    top: 95%;
+    width: 84.3%;
+}
+
+footer span {
+    color: #70B068
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul li {
+    margin-top: 5px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+footer .redes i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F1F1F1
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3A6332;
+    border-radius: 8px
+}
+@media (max-width: 880px) {
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-left: 100px;
+        width: 88.5%;
+        top: 88%;
+        height: 142px;
+
+    }
+
+    .content{
+        top: 45%;
+    }
+    
+}
+
+@media (max-width: 450px) {
+
+    header {
+        width: 100%;
+        margin: 0;
+    }
+
+    header>main {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin: 0;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .menu-icon {
+        top: 47px;
+        left: 75%;
+    }
+
+    aside {
+        width: 100px;
+    }
+    .titulo{
+        margin-top: 10px;
+    }
+    .moissanite{
+        height: 8rem;
+        width: 23rem;
+    }
+    .frete{
+        height: 8rem;
+        width: 23rem;
+    }
+    .desconto{
+        height: 8rem;
+        width: 23rem;
+    }
+
+    .zirconia{
+        height: 8rem;
+        width: 23rem;
+    }
+
+
+
+    footer {
+        width: 100%;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: center;
+    }
+
+    footer nav {
+        display: none;
+    }
+
+    .nome-footer {
+        margin-left: 2rem;
+    }
+
+    #insta {
+        font-size: 1.5rem;
+        margin-left: 100px;
+    }
+}
