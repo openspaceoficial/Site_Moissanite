@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer orçamento</title>
+    <link rel="stylesheet" href="fazerOrcamento.css">
+    <script src="https://kit.fontawesome.com/5553e94d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <main>
+            <h2>Romulo <span class="verde">Moissanite</span></h2>
+            <div class="dropdown">
+                <button class="dropbtn">Cadastro/Login</button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <p>Usuário</p>
+                    <input type="text">
+                    <p>Senha</p>
+                    <input type="password">
+                    <button>Entrar</button>
+                </div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Menu Lateral -->
+            <div class="sidebar" id="sidebar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Historico.html">Histórico</a></li>
+                    <li><a href="/orcamento/orcamento.html">Orçamento</a></li>
+                    <li><a href="/area.html">Área Restrita</a></li>
+                </ul>
+            </div>
+        </main>
+    </header>
+
+    <main id="main">
+        <div id="inicio">
+            <h1>Faça já seu orçamento!</h1>
+            <p>Forneça as especificações do produto, veja a prévia e adicione-o ao seu orçamento.</p>
+        </div>
+
+
+
+
+        <div>
+
+            <div class="radio-inputs">
+                <label class="radio">
+                    <input type="radio" name="radio"  onclick="mudar_formato()" id="radioMoissanite" value="Moissanite">
+                    <span class="name">Moissanite</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="radio"  onclick="mudar_formato()" id="radioZirconia" value="Zirconia">
+                    <span class="name">Zirconia</span>
+                </label>
+            </div>
+
+        </div>
+
+
+        
+        <div>
+            <select id="category" onchange="adicionar_numeros()" aria-label="Selecione"> <!--Milímetro-->
+                <option value=" ">Formato</option>
+            </select>
+
+            <input type="text" id="quantidade" placeholder="Unidade"> <!--Quantidade-->
+        </div>
+
+
+
+
+
+        <div>
+            <select id="color" disabled hidden aria-label="Selecione">
+                <option value=" ">Cor</option>
+                <option value="Azul">Azul</option>
+                <option value="Vermelho">Vermelho</option>
+            </select>
+
+            <!--Quilate-->
+            <input type="text" id="quilate" hidden disabled placeholder="Quilates"> <!--Quantidade-->
+
+            <select id="size" aria-label="Selecione o tamanho" onchange="precos()">
+                <option value=" ">Milímetro</option>
+            </select>
+        </div>
+
+
+
+        <!-- Botões -->
+        <button class="selecao" onclick="showPreview()">Ver Prévia</button>
+        <button class="selecao" onclick="verificarValor(), precos()">Confirmar e Adicionar Produto</button>
+
+
+
+        <!-- Prévia do produto -->
+        <div class="product-card" id="previewCard">
+            <img src="https://via.placeholder.com/150" alt="Foto do Produto" id="productImagePreview">
+            <h2>Prévia do Produto</h2>
+            <div class="product-details">
+                <p> <strong>Joia:</strong> <span id="tipoJoiaPreview"></span> </p>
+                <p> <strong>Cor:</strong> <span id="corPreview"></span> </p>
+                <p> <strong>Unidade:</strong> <span id="quantidadePreview"></span> </p>
+                <p><strong>Tamanho:</strong> <span id="sizePreview"></span></p>
+                <p><strong>Formato:</strong> <span id="categoryPreview"></span></p>
+                <p><strong>Quilates:</strong> <span id="quilatePreview"></span></p>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="nome-footer">
+            <h3>Romulo <span>Moissanite</span></h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Historico.html">Histórico</a></li>
+                <li><a href="/orcamento/orcamento.html">Orçamento</a></li>
+                <li><a href="/area.html">Área Restrita</a></li>
+            </ul>
+        </nav>
+        <div class="redes">
+            <a href="https://www.instagram.com/romulomoissanite2/" target="_blank" rel="noopener noreferrer"
+                title="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://wa.me/5531986078574" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <span class="sr-only">WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+            </a>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <script src="fazerOrcamento.js"></script>
+</body>
+
+</html>
