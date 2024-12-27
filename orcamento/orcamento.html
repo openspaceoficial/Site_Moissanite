@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçameto</title>
+    <link rel="stylesheet" href="orcamento.css">
+    <script src="https://kit.fontawesome.com/5553e94d09.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <main>
+            <h2>Romulo <span class="verde">Moissanite</span></h2>
+            <div class="dropdown">
+                <button class="dropbtn">Cadastro/Login</button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <p>Usuário</p>
+                    <input type="text">
+                    <p>Senha</p>
+                    <input type="password">
+                    <button>Entrar</button>
+                </div>
+            </div>
+
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Menu Lateral -->
+            <div class="sidebar" id="sidebar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Historico.html">Histórico</a></li>
+                    <li><a href="/orcamento/orcamento.html">Orçamento</a></li>
+                    <li><a href="/area.html">Área Restrita</a></li>
+                </ul>
+            </div>
+
+        </main>
+    </header>
+
+    <main id="main">
+        <div id="inicio">
+            <h1>Orçamento</h1>
+            <p>Confira o resultado final de seus produtos.</p>
+        </div>
+
+        <div id="pesquisa">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder=" Formato da pedra">
+        </div>
+        <div class="card-1">
+            <div class="name">
+                <div class="name-rock">Moissanite</div>
+            </div>
+            <div class="table">
+                <div class="table-divs">
+                    <div>Formato</div>
+                    <div>Milímetro</div>
+                    <div>Unidade</div>
+                    <div>Quilate</div>
+                    <div>Valor</div>
+                </div>
+
+                <!-- <div class="divs-table">
+
+                </div> -->
+                <div id="productsContainer">
+
+                </div>
+
+            </div>
+            <div class="table-genered"></div>
+
+            <div>
+                <p class="desconto">Desconto: <span></span></p>
+            </div>
+        </div>
+
+
+        <div class="card-2">
+            <div class="name">
+                <div class="name-rock">Zirconia</div>
+            </div>
+
+            <div class="table-divs">
+                <div>Formato</div>
+                <div>Milímetro</div>
+                <div>Unidade</div>
+                <div>Cor</div>
+                <div>Valor</div>
+                <div></div>
+            </div>
+
+            <div id="productsContainerZirconia">
+
+            </div>
+
+            <div>
+                <p class="desconto">Desconto: <span></span></p>
+            </div>
+        </div>
+
+        <div class="card-3">
+            <div>
+                <p class="desconto">Desconto final: <span></span></p>
+                <p class="desconto">Frete: <span></span></p>
+                <p class="desconto">Seguro: <span>1.95%</span></p>
+            </div>
+        </div>
+
+
+        <a class="btnAdicionar" href="/Fazer/fazerOrcamento.html">Adicionar produto</a>
+        <a class="btnAdicionar" href="/">Finalizar Orçamento</a>
+
+    </main>
+
+    <footer>
+        <div class="nome-footer">
+            <h3>Romulo <span>Moissanite</span></h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Historico.html">Histórico</a></li>
+                <li><a href="/orcamento/orcamento.html">Orçamento</a></li>
+                <li><a href="/area.html">Área Restrita</a></li>
+            </ul>
+        </nav>
+        <div class="redes">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+        </div>
+    </footer>
+
+    <script src="orcamento.js"></script>
+</body>
+
+</html>

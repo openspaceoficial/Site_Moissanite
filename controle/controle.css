@@ -1,0 +1,597 @@
+* {
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header>main {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid rgb(129, 117, 117);
+    box-shadow: 1px 1px 10px black;
+    padding: 20px;
+    position: sticky;
+    width: 100%;
+    z-index: 999;
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F1F1F1
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3A6332;
+    border-radius: 8px
+}
+
+
+h2 {
+    margin-right: 45%;
+    margin-left: 5%;
+}
+
+h2>span {
+    color: #3A6332;
+}
+
+main>button {
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    color: white;
+    background-color: #3A6332;
+    font-family: "Lexend", sans-serif;
+}
+
+main>img {
+    margin-left: 10%;
+}
+
+
+
+.dropbtn {
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    color: white;
+    background-color: #3A6332;
+    font-family: "Lexend", sans-serif;
+    transition: 0.5s;
+    grid-column: 2;
+}
+
+.dropbtn:hover {
+    background-color: #5e9154;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content p {
+    color: black;
+    display: block;
+    margin-left: 10px;
+}
+
+.dropdown-content input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.dropdown-content button {
+    margin-left: 30%;
+    border: none;
+    border-radius: 10px;
+    background-color: #5e9154;
+    height: 30px;
+    width: 80px;
+    color: white;
+    margin-bottom: 4px;
+    font-family: "Lexend", sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* menu lateral */
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 85%;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #3A6332;
+    color: white;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    transform: scale(.5.1);
+    font-weight: 800;
+}
+
+/* Estilo para transição do ícone de barras */
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 8px;
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg);
+    position: relative;
+    top: -8px;
+}
+
+
+/*  Main */
+
+/* From Uiverse.io by Yaya12085 */
+.radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #EEE;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 300px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.radio-inputs .radio input {
+    display: none;
+}
+
+.radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: rgba(51, 65, 85, 1);
+    transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked+.name {
+    background-color: #fff;
+    font-weight: 600;
+}
+
+/* Fim dos radio */
+
+#main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #000;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.modificar {
+    background-color: #3A6332;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    width: 60vw;
+    color: white;
+    font-size: 25px;
+}
+
+#parteUm {
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    flex-wrap: wrap;
+}
+
+#fixos,
+.product-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    justify-items: center;
+    width: 60vw;
+    border-bottom: 2px solid rgb(191, 251, 173);
+    margin-bottom: 30px;
+}
+
+.umEdois {
+    width: 150px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.modificar button {
+    padding: 12px;
+    border-radius: 45px;
+    border: none;
+    background-color: white;
+    margin-bottom: 20px;
+    font-size: 17px;
+
+    &:hover {
+        background-color: #e2e2e2;
+        cursor: pointer;
+        transition: 1s;
+    }
+}
+
+#pesquisa input {
+    width: 200px;
+}
+
+.modificar input[type="text"],
+select {
+    border-radius: 11px;
+    padding: 15px;
+    border: none;
+    font-size: 17px;
+    width: 120px;
+    background-color: white;
+}
+
+#assunto,
+#data {
+    border-radius: 11px;
+    padding: 15px;
+    border: none;
+    font-size: 17px;
+    width: 170px;
+}
+
+#faturar {
+    margin-bottom: 15px;
+}
+
+.linha-branca {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+#verTabela {
+    margin-left: 15px;
+}
+
+#tabela {
+    display: none;
+}
+
+
+.modificar .flex-m:nth-child(5) {
+    margin-bottom: 0;
+}
+
+.flex-m {
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+}
+
+#calcularTotal {
+    margin: 0;
+    margin-top: 30px;
+}
+
+.flex-m>p {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#z {
+    width: 193.812px;
+}
+
+#depesas {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+
+#total {
+    padding: 20px 50px;
+    background-color: #3A6332;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+#total p {
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Footer */
+footer {
+    background-color: #3A6332;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    padding-left: 300px;
+    color: #fff;
+}
+
+footer span {
+    color: #3A6332;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul li {
+    margin-top: 5px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .redes i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: white;
+}
+
+
+
+@media (max-width: 450px) {
+    footer {
+        width: 100%;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: center;
+    }
+
+    footer nav {
+        display: none;
+    }
+
+    .nome-footer {
+        margin-left: 2rem;
+    }
+
+    #insta {
+        font-size: 1.5rem;
+        margin-left: 100px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0;
+    }
+
+    header>main {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin: 0;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .menu-icon {
+        top: 47px;
+        left: 75%;
+    }
+
+    aside {
+        width: 100px;
+    }
+
+    #inicio p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+
+    header {
+        width: 100%;
+        margin: 0;
+    }
+
+    header>main {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin: 0;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .menu-icon {
+        top: 47px;
+        left: 75%;
+    }
+
+    aside {
+        width: 100px;
+    }
+
+    .name-rock {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #inicio p {
+        font-size: 15px;
+    }
+
+    #parteUm {
+        align-items: center;
+        justify-content: center;
+    }
+
+    #faturar {
+        margin-top: 20px;
+    }
+
+    .flex-m div {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modificar {
+        font-size: 20px;
+        width: 400px;
+    }
+
+    #total {
+        font-size: 15px;
+    }
+
+    #fixos {
+display: none;
+    }
+
+    .product-row {
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        width: 100%;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: center;
+    }
+
+    footer nav {
+        display: none;
+    }
+
+    .nome-footer {
+        margin-left: 2rem;
+    }
+
+    #insta {
+        font-size: 1.5rem;
+        margin-left: 100px;
+    }
+}

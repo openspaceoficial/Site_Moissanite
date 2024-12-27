@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle</title>
+    <link rel="stylesheet" href="controle.css">
+    <script src="https://kit.fontawesome.com/5553e94d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <main>
+            <h2>Romulo <span class="verde">Moissanite</span></h2>
+            <div class="dropdown">
+                <button class="dropbtn">Cadastro/Login</button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <p>Usuário</p>
+                    <input type="text">
+                    <p>Senha</p>
+                    <input type="password">
+                    <button>Entrar</button>
+                </div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Menu Lateral -->
+            <div class="sidebar" id="sidebar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Historico.html">Histórico</a></li>
+                    <li><a href="/orcamento/orcamento.html">Orçamento</a></li>
+                    <li><a href="/area.html">Área Restrita</a></li>
+                </ul>
+            </div>
+        </main>
+    </header>
+
+
+
+
+    <main id="main">
+        <div id="inicio">
+            <h1>Veja os status da sua empresa!</h1>
+            <p>Modifique pendências, veja as estatísticas e muito mais.</p>
+        </div>
+
+        <section class="modificar">
+            <form form action="" id="parteUm">
+                <div>
+                    <p>Assunto:</p>
+                    <input id="assunto" type="text">
+                </div>
+
+
+                <div class="umEdois">
+                    <p>Parcelas:</p>
+                    <input class="text_little" onchange="calcularParcela()" type="text" id="parcelas">
+                </div>
+
+
+                <div>
+                    <p>Data:</p>
+                    <input id="data" type="date">
+                </div>
+
+
+                <div>
+                    <div id="faturar">
+                        <input name="radio" id="radio1" type="radio"> Pago
+                    </div>
+
+                    <div>
+                        <input name="radio" id="radio2" type="radio"> Não pago
+                    </div>
+                </div>
+
+
+                <div class="umEdois">
+                    <p>Total:</p>
+                    <input class="text_little" id="preco" onchange="calcularParcela()" type="text">
+                </div>
+                
+
+                <div class="umEdois">
+                    <p>Mensal:</p>
+                    <input class="text_little" disabled id="precoParcelas" type="text">
+                </div>
+            </form>
+
+            <div id="parteDois">
+                <button onclick="adicionar(), alterta(), valoresNatabela()">Adicionar</button>
+                <button id="verTabela" onclick="ver_tabela()">Ver tabela</button>
+            </div>
+
+        </section>
+
+        <section class="modificar" id="tabela">
+            <button onclick="ocultarTbl()">Ocultar tabela</button>
+
+            <div id="pesquisa">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Pesquisar na tabela">
+            </div>
+
+            <div id="fixos">
+                <p>Assunto:</p>
+                <p>Parcelas:</p>
+                <p>Data:</p>
+                <p>Pagamento:</p>
+                <p>Total:</p>
+                <p>Mensal:</p>
+            </div>
+
+
+            <div id="containerDados">
+
+            </div>
+        </section>
+
+        <section class="modificar">
+            <div class="flex-m">
+                <p>Moissanite</p>
+
+                <div>
+                    <p>Faturamento:</p>
+                    <input id="fatu-Moi" type="text">
+                </div>
+
+                <div>
+                    <p>Compras:</p>
+                    <input id="comp-Moi" type="text">
+                </div>
+            </div>
+
+            <div class="linha-branca"></div>
+
+            <div class="flex-m">
+                <p id="z">Zirconia</p>
+
+                <div>
+                    <p>Faturamento:</p>
+                    <input id="fatu-Zir" type="text">
+                </div>
+                <div>
+                    <p>Compras:</p>
+                    <input id="comp-Zir" type="text">
+                </div>
+
+            </div>
+
+            <div class="linha-branca"></div>
+
+            <button id="calcularTotal" onclick="calcular()">Calcular valores totais</button>
+
+            <div class="flex-m">
+                <p>Faturamento total: R$<span id="faturaTotal">
+                        <!-- totalFatu -->
+                    </span></p>
+                <p>Compras totais: R$<span id="comprasTotais">
+                        <!--  comprasTotais.innerHTML = somaComp; -->
+                    </span></p>
+            </div>
+
+            <p id="depesas">Valor total: R$<span id="despesas">
+
+                </span></p>
+        </section>
+
+
+        <section id="total">
+            <p>Total líquido: R$<span id="liquido"></span> </p>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="nome-footer">
+            <h3>Romulo <span>Moissanite</span></h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Historico.html">Histórico</a></li>
+                <li><a href="/orcamento/orcamento.html">Orçamento</a></li>
+                <li><a href="/area.html">Área Restrita</a></li>
+            </ul>
+        </nav>
+        <div class="redes">
+            <a href="https://www.instagram.com/romulomoissanite2/" target="_blank" rel="noopener noreferrer"
+                title="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://wa.me/5531986078574" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <span class="sr-only">WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+            </a>
+        </div>
+
+    </footer>
+    <script src="controle.js"></script>
+</body>
+
+</html>
